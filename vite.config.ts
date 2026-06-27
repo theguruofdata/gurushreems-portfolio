@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
 
   // Required for GitHub Pages
-  base: '/gurushreems-portfolio/',
+  base: '/',
 
   resolve: {
     alias: {
