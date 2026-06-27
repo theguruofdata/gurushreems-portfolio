@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Hanken Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-surface: #020617;
+  --color-on-background: #f8fafc;
+  --color-on-surface: #f8fafc;
+  --color-on-surface-variant: #94a3b8;
+  --color-outline: #475569;
+  --color-outline-variant: #334155;
+  --color-electric-indigo: #6366f1;
+  --color-sunset-orange: #d946ef;
+  --color-cyan-accent: #22d3ee;
+  
+  --spacing-section-gap: 160px;
+  --spacing-glass-padding: 40px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 32px;
+  --spacing-base: 8px;
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+@utility glass-card-interactive {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@utility indigo-orb {
+  background: #4f46e5;
+  opacity: 0.18;
+  width: 550px;
+  height: 550px;
+}
+
+@utility fuchsia-orb {
+  background: #d946ef;
+  opacity: 0.12;
+  width: 450px;
+  height: 450px;
+}
+
+@utility cyan-orb {
+  background: #06b6d4;
+  opacity: 0.08;
+  width: 400px;
+  height: 400px;
+}
+
+@utility custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d946ef;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.12s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #020617;
+}
+
+body {
+  background-color: #020617;
+  color: #f8fafc;
+  font-family: "Hanken Grotesk", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
